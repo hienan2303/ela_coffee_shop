@@ -5,7 +5,7 @@ import { Navbar } from './components';
 import './App.css';
 
 const App = () => (
-  <Router>
+  <Router basename="/ela_coffee_shop">
     <Routes>
       <Route path="/" element={<Header />} />
       <Route
