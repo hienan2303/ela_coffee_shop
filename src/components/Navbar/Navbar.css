@@ -1,0 +1,211 @@
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.app__navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #FFE5B8
+    ;
+    padding: 1rem 2rem;
+    animation: slideIn 2s ease-out; /* Trigger slide-in animation */
+
+}
+
+.app__navbar-logo{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+}
+
+.app__navbar-logo img {
+    width: 150px;
+    height: 150px;
+
+}
+
+.app__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; 
+    padding-left: 3em; 
+    align-items: center;
+    list-style: none;
+    background-color: #FFE5B8;
+    gap: 1em; 
+}
+
+.app__navbar-links li {
+    display: flex;
+    align-items: center;
+    padding: 0 15px; /* Space around the text */
+    position: relative; /* Needed for positioning the divider */
+    transition: 0.5s ease;
+
+}
+
+.app__navbar-links li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0; /* Position the divider at the right edge of the list item */
+    top: 50%; /* Align vertically to the median line */
+    transform: translateY(-50%); /* Center the divider relative to its height */
+    width: 1px; /* Divider width */
+    height: 30px; /* Adjust divider height relative to the text height */
+    background-color: grey; /* Divider color */
+}
+
+.app__navbar-links li:hover {
+    color: white;
+    border-bottom: 1px solid var(--color-golden);
+}
+
+.app__navbar-links li a svg, 
+.app__navbar-login a svg {
+    position: relative;
+    top: 2px; /* Moves icon slightly downward */
+    left: -3px; /* Moves icon slightly to the left */
+    font-size: 1.2em; /* Optional: Adjust icon size */
+}
+
+.app__navbar-login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.app__navbar-login a{
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.app__navbar-login a:hover{
+    color: black;
+    border-bottom: 1px solid var(--color-golden);
+}
+
+
+.app__navbar-login div {
+    width: 1px;
+    height: 30px;
+    background-color: gray;
+}
+
+.app__navbar-smallscreen {
+    display: none;
+}
+
+.app__navbar-smallscreen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-black);
+    transition: .5s ease;
+
+    flex-direction: column;
+    z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+    font-size: 27px;
+    color: var(--color-golden);
+    cursor: pointer;
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.app__navbar-smallscreen_links {
+    list-style: none;
+}
+
+.app__navbar-smallscreen_links li {
+    margin: 2rem;
+    cursor: pointer;
+    color: var(--color-golden);
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-base);
+}
+
+.app__navbar-smallscreen_links li:hover {
+    color: var(--color-white);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 10px 0;
+    min-width: 150px;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #000;
+  }
+  
+
+@media screen and (min-width: 2000px) {
+    .app__navbar-logo img {
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-smallscreen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__navbar {
+        padding: 1rem;
+    }
+
+    .app__navbar-login {
+        display: none;
+    }
+
+    .app__navbar-logo img {
+        width: 110px;
+    }
+}

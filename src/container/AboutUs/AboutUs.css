@@ -1,0 +1,138 @@
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+  
+  
+  /* Adjust the layout of the About Us content */
+.timeline {
+    position: relative;
+    z-index: 1; /* Make sure this content is below the navbar */
+}
+  
+.app__aboutus {
+    position: relative;
+    background: url('../../assets/bg1.png');
+    padding: 2rem; /* Add padding to prevent content from sticking to edges */
+    color: #FFE5B8; /* Ensure text contrasts well with the black background */
+    animation: slideIn 1s ease-out; /* Trigger slide-in animation */
+
+}
+
+
+.timeline__title {
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 6rem;
+    color: #624B33;
+    font-family: 'Dancing Script', cursive; /* Vintage-inspired font */
+
+}
+
+.timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-grey);
+}
+
+.timeline__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin: 6rem 0;
+}
+
+.timeline__container-reverse {
+    flex-direction: row-reverse;
+}
+
+.timeline__container::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-golden);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.timeline__content {
+    flex: 1;
+    padding: 6rem 20rem;
+    text-align: left;
+    margin-left: -160px; 
+}
+
+.timeline__content h1 {
+    margin-bottom: 1rem;
+}
+
+.timeline__image {
+    flex: 1;
+    text-align: center;
+}
+
+.timeline__image img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.timeline__container-reverse .timeline__content {
+    text-align: left;
+    margin-right: -60px;  
+
+}
+
+@media screen and (min-width: 2000px) {
+    .app__aboutus-content_knife img {
+        height: 1110px;
+    }
+
+    .app__aboutus-content_about p,
+    .app__aboutus-content_history p {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .app__aboutus-content {
+        flex-direction: column;
+    }
+
+    .app__aboutus-content_knife {
+        margin: 4rem 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__aboutus-overlay img {
+        width: 80%;
+        height: 320px;
+    }
+}
