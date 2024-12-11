@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ela_coffee_shop/static/css/main.8360943d.css",
-    "main.js": "/ela_coffee_shop/static/js/main.433fb242.js",
+    "main.js": "/ela_coffee_shop/static/js/main.28aa26b3.js",
     "static/media/meal.mp4": "/ela_coffee_shop/static/media/meal.a1b6c6dc67dfa2f99343.mp4",
     "static/media/bg1.png": "/ela_coffee_shop/static/media/bg1.1aeda2f97fa85ee7ee4c.png",
     "static/media/bg2.png": "/ela_coffee_shop/static/media/bg2.36c81a2b319d770f8d58.png",
@@ -43,10 +43,10 @@
     "index.html": "/ela_coffee_shop/index.html",
     "static/media/spoon.svg": "/ela_coffee_shop/static/media/spoon.d079f43fbcf509908d3865293080795a.svg",
     "main.8360943d.css.map": "/ela_coffee_shop/static/css/main.8360943d.css.map",
-    "main.433fb242.js.map": "/ela_coffee_shop/static/js/main.433fb242.js.map"
+    "main.28aa26b3.js.map": "/ela_coffee_shop/static/js/main.28aa26b3.js.map"
   },
   "entrypoints": [
     "static/css/main.8360943d.css",
-    "static/js/main.433fb242.js"
+    "static/js/main.28aa26b3.js"
   ]
 }
