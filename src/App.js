@@ -7,7 +7,16 @@ import './App.css';
 const App = () => (
   <Router basename="/ela_coffee_shop">
     <Routes>
-      <Route path="/" element={<Header />} />
+      <Route path="/" element={<Intro />} />
+      <Route
+        path="/header"
+        element={
+          <> 
+          <Navbar />
+          <Header />
+          </>
+        }
+      />
       <Route
         path="/about"
         element={
@@ -27,15 +36,6 @@ const App = () => (
         }
       />
       <Route
-        path="/chef"
-        element={
-          <>
-            <Navbar />
-            <Chef />
-          </>
-        }
-      />
-      <Route
         path="/intro"
         element={
           <>
@@ -45,29 +45,20 @@ const App = () => (
         }
       />
       <Route
-        path="/laurels"
-        element={
-          <>
-            <Navbar />
-            <Laurels />
-          </>
-        }
-      />
-      <Route
-        path="/gallery"
-        element={
-          <>
-            <Navbar />
-            <Gallery />
-          </>
-        }
-      />
-      <Route
-        path="/contact"
+        path="/team"
         element={
           <>
             <Navbar />
             <FindUs />
+          </>
+        }
+      />
+        <Route
+        path="/store"
+        element={
+          <>
+            <Navbar />
+            <Gallery />
           </>
         }
       />

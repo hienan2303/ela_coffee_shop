@@ -1,0 +1,99 @@
+.app__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: black; /* Set text color to black */
+    background: url('../../assets/bg3.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  .app__footer-headtext,
+  .p__opensans {
+    color: black; /* Ensures the text inside these elements is black */
+  }
+  
+  .app__footer-links_logo p {
+    color: black; /* Set the quote text to black */
+  }
+  
+  .footer__copyright {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: black; /* Set the copyright text color to black */
+  }
+  
+  
+  .section__padding {
+    padding: 50px 20px;
+  }
+  
+  .app__footer-links_contact, .app__footer-links_work {
+    margin-bottom: 30px;
+  }
+  
+  .app__footer-headtext {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: right;
+  }
+  
+  .p__opensans {
+    font-size: 1rem;
+    margin: 5px 0;
+    text-align: right;
+  }
+  
+  .app__footer-links_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 30px;
+  }
+  
+  .app__footer-links_icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .app__footer-links_icons svg {
+    font-size: 24px;
+    color: white;
+  }
+  
+  .spoon__img {
+    margin-top: 15px;
+    max-width: 100%;
+  }
+  
+  .footer__copyright {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: white;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .app__footer {
+      padding: 20px 10px;
+    }
+  
+    .app__footer-links_contact, .app__footer-links_work {
+      margin-bottom: 15px;
+    }
+  
+    .app__footer-links_logo {
+      align-items: center;
+    }
+  
+    .footer__copyright {
+      text-align: center;
+    }
+  }
+  

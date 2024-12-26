@@ -1,138 +1,82 @@
-@keyframes slideIn {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-  
-  
-  /* Adjust the layout of the About Us content */
-.timeline {
-    position: relative;
-    z-index: 1; /* Make sure this content is below the navbar */
-}
-  
 .app__aboutus {
-    position: relative;
     background: url('../../assets/bg1.png');
-    padding: 2rem; /* Add padding to prevent content from sticking to edges */
-    color: #FFE5B8; /* Ensure text contrasts well with the black background */
-    animation: slideIn 1s ease-out; /* Trigger slide-in animation */
-
+    padding: 2rem;
 }
 
-
-.timeline__title {
-    text-align: center;
-    font-size: 60px;
-    margin-bottom: 6rem;
-    color: #624B33;
-    font-family: 'Dancing Script', cursive; /* Vintage-inspired font */
-
-}
-
-.timeline {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0;
+.aboutus__section {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    margin-bottom: 4rem;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background-color: var(--color-grey);
-}
-
-.timeline__container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    margin: 6rem 0;
-}
-
-.timeline__container-reverse {
-    flex-direction: row-reverse;
-}
-
-.timeline__container::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-golden);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-}
-
-.timeline__content {
+.aboutus__text {
     flex: 1;
-    padding: 6rem 20rem;
+    padding: 0 2rem;
     text-align: left;
-    margin-left: -160px; 
 }
 
-.timeline__content h1 {
-    margin-bottom: 1rem;
-}
-
-.timeline__image {
+.aboutus__image {
     flex: 1;
     text-align: center;
+    max-width: 100%;
 }
 
-.timeline__image img {
+.aboutus__image img {
     object-fit: cover;
     border-radius: 10px;
+    width: 100%;
+    height: auto; /* Ensure the image height adjusts proportionally */
+    max-width: 700px; /* Optional: limit the max width for large screens */
 }
 
-.timeline__container-reverse .timeline__content {
-    text-align: left;
-    margin-right: -60px;  
-
+.app__headtext {
+    font-family: 'The Seasons';
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #624B33;
+    
+}
+.app__title {
+    font-family: 'Cormorant', serif; /* Use your desired font */
+    font-size: 10rem;
+    text-align: center;
+    color: #624B33;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 2px solid #624B33;
+    border-bottom: 2px solid #624B33;
 }
 
-@media screen and (min-width: 2000px) {
-    .app__aboutus-content_knife img {
-        height: 1110px;
-    }
-
-    .app__aboutus-content_about p,
-    .app__aboutus-content_history p {
-        margin: 4rem 0;
-    }
+.app__header-chapter {
+    font-family: 'Glacial Indifference', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
 }
 
-@media screen and (max-width: 900px) {
-    .app__aboutus-content {
+@media screen and (max-width: 768px) {
+    .aboutus__section {
         flex-direction: column;
+        text-align: center;
     }
 
-    .app__aboutus-content_knife {
-        margin: 4rem 0;
+    .aboutus__text {
+        padding: 0;
+        margin-bottom: 2rem;
     }
-}
 
-@media screen and (max-width: 650px) {
-    .app__aboutus-overlay img {
+    .headtext__cormorant {
+        font-size: 2rem;
+    }
+
+    .app__header-chapter {
+        font-size: 0.9rem;
+    }
+
+    .aboutus__image img {
         width: 80%;
-        height: 320px;
+        max-width: none; /* Allow image width to be 80% of the container */
     }
 }

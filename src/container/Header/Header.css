@@ -1,136 +1,137 @@
 .app__header {
-    background: url('../../assets/bg.png');
+    background-color: #f1ceb1;
     display: flex;
-    flex-direction: column; /* Stack the content vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: flex-start; /* Ensure content starts at the top */
-    min-height: 100vh; /* Minimum height of the header */
-    padding-top: 60px; /* Padding for spacing from navbar */
-    position: relative;
-  }
-  
-
-.app__header-h1 {
-    color: '#624B33';
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    line-height: 117px;
-    font-size: 45px;
-    animation: fadeInSlideUp 1.5s ease-out forwards; /* Animation for text */
-    font-family: 'Great Vibes';
-}
-
-
-.app__header-content {
-    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: flex-start; /* Align the content at the top */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Align text to the center */
-    width: 100%; /* Full width */
-    padding-bottom: 20px; /* Add space at the bottom if more content is added */
-    flex-grow: 1; /* Allow content to grow and fill the available space */
+    gap: 20px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px; /* Adjust as needed */
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0; /* Ensure no extra spacing around the container */
+    padding-top: 0; /* No extra space above */
+    position: relative;
+    top: 0;
+    
 }
 
-@keyframes fadeInSlideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px); /* Start from below */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* End at the normal position */
-    }
-}
-
-
-.app__header-img img {
-    width: 550px;
-    height: 500px;
-    max-width: 1000px;
-    max-height: 1000px;
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
-    animation: fadeInSlideIn 1s ease-out forwards;
-}
-  
 .app__header-img {
-    display: flex;
-    position: relative; /* Keeps buttons over the image */
+    width: 100%; /* Ensure the image takes the full width of its container */
+    max-width: 800px; /* Restrict maximum size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space between images */
 }
 
-
-
-.nav-buttons {
-  display: flex;
-  justify-content: center; /* Center align the buttons */
-  gap: 10px; /* Add space between buttons */
-  margin-top: 50px; /* Space between image and buttons */
-}
-
-.nav-btn {
-  background-color: transparent; /* No background */
-  border: none; /* Remove outline */
-  cursor: pointer;
-  font-size: 16px; /* Size of the square icon */
-  color: black; /* Default color of the square icon */
-  transition: color 0.3s ease; /* Smooth hover effect */
-}
-
-.nav-btn:hover {
-  color: #f6c36c; /* Highlight color on hover */
-}
-  .about-us-btn {
-    background-color: #FFE5B8; /* Example color */
+.about-us-btn {
+    background-color: #FFE5B8;
     color: #624B33;
     border: none;
     padding: 12px 24px;
-    font-size: 16px;
+    font-size: 1.1rem; /* Slightly larger button text */
     cursor: pointer;
-    margin-top: 0px;
+    margin-top: 20px;
     border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    display: inline-block; /* Ensures the button doesn't stretch */
+}
+
+.about-us-btn:hover {
+    background-color: lightsalmon;
+}
+
+.app__header-h1 {
+    color: #624B33;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    line-height: 1.2;
+    font-size: 3rem; /* Use relative font size */
+    animation: fadeInSlideUp 1.5s ease-out forwards;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 20px;
+}
+
+.app__header-chapter {
+    color: #624B33;
+    font-weight: 500;
+    text-align: justify;
+    letter-spacing: 0.04em;
+    font-size: 1.25rem;
+    max-width: 90%; /* Make sure text doesn't stretch too wide */
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* Center button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.full-width-image {
+    width: 100vw;
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes extra spacing below the image in some browsers */
+  }
+
+  .btn {
+    background-color: #624B33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
   
-  .about-us-btn:hover {
-    background-color: lightsalmon; /* Darker color on hover */
+  .btn:hover {
+    background-color: #826047;
   }
   
-/* Define the keyframes for the animation */
-@keyframes fadeInSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px); /* Start slightly off-screen */
+
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 768px) {
+    .app__header-h1 {
+        font-size: 2.5rem; /* Reduce font size */
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0); /* End at the normal position */
+
+    .app__header-chapter {
+        font-size: 1.1rem; /* Reduce text size */
+    }
+
+    .app__header-img {
+        max-width: 400px; /* Smaller images */
+    }
+
+    .about-us-btn {
+        padding: 10px 20px; /* Adjust button padding */
     }
 }
 
-
-@media screen and (min-width: 2000px) {
+/* For mobile devices */
+@media (max-width: 480px) {
     .app__header-h1 {
-        font-size: 180px;
-        line-height: 210px;
+        font-size: 2rem; /* Further reduce font size */
     }
-}
 
-@media screen and (max-width: 1150px) {
-    .app__header-h1 {
-        font-size: 90px;
+    .app__header-chapter {
+        font-size: 1rem; /* Smaller text */
     }
-}
 
-@media screen and (max-width: 650px) {
-    .app__header-h1 {
-        font-size: 70px;
-        line-height: 87px;
+    .app__header-img {
+        max-width: 350px; /* Even smaller images */
     }
-}
 
-@media screen and (max-width: 450px) {
-    .app__header-h1 {
-        font-size: 50px;
-        line-height: 70px;
+    .about-us-btn {
+        padding: 8px 18px; /* Adjust button padding */
     }
 }

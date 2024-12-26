@@ -1,0 +1,136 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.intro__timeline {
+    background: url('../../assets/Intro.png');
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 60px;
+    background-size: cover; /* Ensure the background covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+  }
+  
+
+  @media (max-width: 768px) {
+    .intro__timeline {
+        
+      background-size: cover; /* Make sure it still covers the area on medium-sized screens */
+      background-position: center center; /* Keep it centered */
+      padding-top: 40px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .intro__timeline {
+      background-size: contain; /* Adjust the background size to fit within the viewport on very small screens */
+      background-position: top center; /* Position it at the top-center of the screen */
+      padding-top: 20px; /* Further reduce padding */
+    }
+  }
+  
+  
+  .intro__image-vertical,
+  .intro__image-vertical-wide {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+  }
+  
+  .intro__image-vertical {
+    margin-left: 1000px; /* Adjusted margin */
+  }
+  
+  .intro__image-vertical-wide {
+    margin-left: 150px; /* Adjusted margin */
+  }
+  
+  /* Add zoom effect on image hover */
+  .intro__image-vertical img,
+  .intro__image-vertical-wide img {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+  }
+  
+  .intro__image-vertical img:hover,
+  .intro__image-vertical-wide img:hover {
+    transform: scale(1.2); /* Zoom-in effect */
+  }
+  
+  /* Text that appears on hover */
+  .intro__image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .intro__image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .intro__image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: none; /* Initially hidden */
+    opacity: 0; /* Text is invisible */
+    transition: opacity 0.3s ease; /* Smooth fade-in transition */
+  }
+  
+  .intro__image-container:hover .intro__image-text {
+    display: block;
+    opacity: 1; /* Show text on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .intro__timeline {
+      flex-direction: column; /* Stack the items vertically */
+    }
+  
+    .intro__image-vertical,
+    .intro__image-vertical-wide {
+      margin-left: 0; /* Remove left margin */
+      margin-right: 0;
+      margin-top: 300px;
+    }
+  
+    .intro__image-vertical {
+      align-items: center;
+    }
+  
+    .intro__image-vertical-wide {
+      align-items: center;
+    }
+
+  }
+  
+  @media (max-width: 480px) {
+    .intro__timeline {
+      padding-top: 20px; /* Further reduce padding */
+    }
+  
+    .intro__image-text {
+      font-size: 14px; /* Even smaller text on very small screens */
+    }
+  
+    .intro__image-vertical,
+    .intro__image-vertical-wide {
+      gap: 30px; /* Reduce gap between images */
+    }
+  }
+  
